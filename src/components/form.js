@@ -1,8 +1,9 @@
 import React from "react"
 import useForm from "./useForm";
+import validate from './validation';
 
 const Form = () => {
-  const { values, handleChange, handleSubmit } = useForm(login);
+  const { values, handleChange, handleSubmit } = useForm(login, validate);
 
   function login() {
     console.log(values);
