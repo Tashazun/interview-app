@@ -12,9 +12,7 @@ const Form = () => {
   }
  
   return (
-    <div className="login">
-      <h2 className="login__title">Login</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="login" onSubmit={handleSubmit}>
         <label htmlFor="username">Username</label>
         <input
           id="username"
@@ -23,7 +21,8 @@ const Form = () => {
           name="username"
           onChange={handleChange}
           value={values.username || ""}
-          required />
+          required
+        />
         <label htmlFor="password">Password</label>
         <input
           id="password"
@@ -32,10 +31,14 @@ const Form = () => {
           name="password"
           onChange={handleChange}
           value={values.password || ""}
-          required />
-        <button type="submit">Submit</button>
+          required
+        />
+        <button
+          className="login__button"
+          type="submit"
+          name="submit"
+          >Submit</button>
       </form>
-    </div>
   )
 }
 

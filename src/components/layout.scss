@@ -1,0 +1,11 @@
+@import "../styles/style";
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr 1fr;
+}
+
+footer {
+  grid-area: 1/2/4/3;
+}

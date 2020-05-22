@@ -1,0 +1,16 @@
+.form__greeting {
+  display: flex;
+  justify-content: space-between;
+  grid-area: 1/2/2/3;
+  justify-self: center;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  min-height: 300px;
+  min-width: 700px;
+  background: #FF3651;
+}
+
+.form__heading {
+  align-self: center;
+  text-align: center;
+}

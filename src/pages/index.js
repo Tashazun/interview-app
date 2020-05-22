@@ -1,16 +1,18 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Form from "../components/form"
 import SEO from "../components/seo"
 
+import "./index.scss"
+
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Login Form</h1>
-    <Form />
-    <Link to="/page-2/">Go to page 2</Link>
+    <SEO title="Login" />
+    <section className="form__greeting">
+      <h2 className="form__heading">Login Form</h2>
+      <Form />
+    </section>
   </Layout>
 )
 
