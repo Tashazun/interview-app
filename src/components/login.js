@@ -1,4 +1,5 @@
 import React from "react"
+import { navigate } from "gatsby";
 import useForm from "./useForm";
 import validate from './validation';
 
@@ -8,7 +9,8 @@ const Form = () => {
   const { values, errors, handleChange, handleSubmit } = useForm(login, validate);
 
   function login() {
-    console.log(values);
+    console.log('No errors, submit callback called!');
+    navigate("/page-2");
   }
  
   return (
