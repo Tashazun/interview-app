@@ -1,11 +1,19 @@
 @import "../styles/style";
 
-main {
+.layout {
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 1/2fr 2fr 1/2fr;
+  background: linear-gradient(315deg, rgba(202,118,255,1) 26%, rgba(255,82,82,1) 100%);
+  
 }
 
+main {
+  grid-area: 2/2/3/3;
+}
+
+
 footer {
-  grid-area: 1/2/4/3;
+  grid-area: 3/1/4/5;
 }

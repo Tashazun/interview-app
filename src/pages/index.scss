@@ -1,16 +1,22 @@
-.form__greeting {
+.form {
   display: flex;
-  justify-content: space-between;
-  grid-area: 1/2/2/3;
-  justify-self: center;
-  border-radius: 10px;
+  flex-direction: column;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  min-height: 300px;
-  min-width: 700px;
-  background: #FF3651;
-}
+  height: 70vh;
+  background: #252935;
 
-.form__heading {
-  align-self: center;
-  text-align: center;
+  &__heading {
+    align-self: center;
+    margin: 2em 0;
+    font-size: 1.2em;
+    font-family:'Courier New', Courier, monospace;
+    color: #FFF;
+  }
+
+  &__forgotten-password {
+    text-align: center;
+    margin: 0;
+    color: #FFF;
+    font-family:'Courier New', Courier, monospace;
+  }
 }

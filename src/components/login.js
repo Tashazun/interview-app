@@ -2,7 +2,7 @@ import React from "react"
 import useForm from "./useForm";
 import validate from './validation';
 
-import "./form.scss";
+import "./login.scss";
 
 const Form = () => {
   const { values, errors, handleChange, handleSubmit } = useForm(login, validate);
@@ -13,7 +13,7 @@ const Form = () => {
  
   return (
       <form className="login" onSubmit={handleSubmit}>
-        <label htmlFor="username">Username</label>
+        <label htmlFor="username" className="login__label">Username</label>
         <input
           id="username"
           className={`login__username ${errors.username && 'login__username--invalid'}`}
@@ -23,7 +23,10 @@ const Form = () => {
           value={values.username || ""}
           required
         />
-        <label htmlFor="password">Password</label>
+        {errors.username && (
+          <p className="login__error-message">{errors.username}</p>
+        )}
+        <label htmlFor="password" className="login__label">Password</label>
         <input
           id="password"
           className={`login__password ${errors.password && 'login__password--invalid'}`}
@@ -33,6 +36,9 @@ const Form = () => {
           value={values.password || ""}
           required
         />
+        {errors.password && (
+          <p className="login__error-message">{errors.password}</p>
+        )}
         <button
           className="login__button"
           type="submit"
