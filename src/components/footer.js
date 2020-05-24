@@ -7,13 +7,15 @@ import "./footer.scss"
 
 const Footer = ({ siteTitle }) => (
   <footer className="footer">
-    <div>
+    <div className="footer__disclaimer">
     © {new Date().getFullYear()}, Built with
       {` `}
       <a href="https://www.gatsbyjs.org">Gatsby</a>
     </div>
-    <GiCandyCanes />
-    <Link to="/" >{siteTitle}</Link>
+    <div className="footer__links">
+      <GiCandyCanes className="footer__logo" aria-hidden="true"/>
+      <Link to="/" >{siteTitle} Home</Link>
+    </div>
   </footer>
 )
 

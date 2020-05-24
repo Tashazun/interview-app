@@ -1,12 +1,37 @@
+@import "../styles/style";
+
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1em;
+  padding: 0 2em;
   background: #252935;
   color: #FFF;
 
+  &__disclaimer {
+    margin: .5em 0;
+    font-family:'Courier New', Courier, monospace;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__logo {
+    height: 3em;
+    width: 3em;
+    align-self: center;
+  }
+
   a {
     color: #FFF;
+    font-family:'Courier New', Courier, monospace;
+    padding: .2em;
+    margin: .2em;
+    &:focus {
+      outline: 2px solid #FCD8C8;
+    }
   }
 }

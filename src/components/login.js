@@ -20,12 +20,12 @@ const Form = () => {
         <label htmlFor="username" className="login__label">Username</label>
         <input
           id="username"
-          className={`login__username ${errors.username && 'login__username--invalid'}`}
+          className={`login__input ${errors.username && 'login__input--invalid'}`}
           type="text"
           name="username"
           onChange={handleChange}
           value={values.username || ""}
-          aria-describedby="error__1"
+          aria-describedby={`${errors.username ? "error__1" : ""}`}
           aria-required="true"
         />
         {errors.username && (
@@ -34,19 +34,19 @@ const Form = () => {
             className="login__error-message"
             tabIndex="-1"
           >
-            <MdError />
+            <MdError aria-hidden="true"/>
             {errors.username}
           </span>
         )}
         <label htmlFor="password" className="login__label">Password</label>
         <input
           id="password"
-          className={`login__password ${errors.password && 'login__password--invalid'}`}
+          className={`login__input ${errors.password && 'login__input--invalid'}`}
           type="password"
           name="password"
           onChange={handleChange}
           value={values.password || ""}
-          aria-describedby="error__2"
+          aria-describedby={`${errors.password ? "error__2" : ""}`}
           aria-required="true"
         />
         {errors.password && (
@@ -55,7 +55,7 @@ const Form = () => {
             className="login__error-message"
             tabIndex="-1"
           >
-            <MdError />
+            <MdError aria-hidden="true"/>
             {errors.password}
           </span>
         )}

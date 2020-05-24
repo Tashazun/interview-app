@@ -10,7 +10,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Login Page" />
     <section className="form">
-      <h2 className="form__heading">Log Into Your Account</h2>
+      <h1 className="form__heading">Log Into Your Account</h1>
       <Login />
       <p className="form__forgotten-password">Forgot Password?</p>
     </section>

@@ -3,10 +3,13 @@
 .layout {
   height: 100vh;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1/2fr 2fr 1/2fr;
+  grid-template-columns: auto;
+  grid-template-rows: 5% 80% 15%;
   background: linear-gradient(315deg, rgba(202,118,255,1) 26%, rgba(255,82,82,1) 100%);
-  
+  @include tablet {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 10% 80% 10%;
+  }
 }
 
 main {
@@ -15,5 +18,12 @@ main {
 
 
 footer {
-  grid-area: 3/1/4/5;
+  grid-area: 3/1/4/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

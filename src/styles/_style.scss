@@ -3,3 +3,18 @@ body {
   margin: 0;
   height: 100vh;
 }
+
+$tablet-width: 515px;
+$desktop-width: 800px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
