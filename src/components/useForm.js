@@ -6,13 +6,20 @@ const useForm = (callback, validate) => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     if (event) event.preventDefault();
     setIsSubmitting(true);
     setErrors(validate(values));
   };
 
-  const handleChange = (event) => {
+  const focusOnError = () => {
+    const el = document.getElementsByClassName("login__error-message");
+    if ( el.length) {
+      el[0].focus();
+    }
+  }
+
+  const handleChange = event => {
     event.persist();
     setValues(values => ({ ...values, [event.target.name]: event.target.value }));
   };
@@ -21,6 +28,7 @@ const useForm = (callback, validate) => {
     if (Object.keys(errors).length === 0 && isSubmitting) {
       callback();
     }
+    focusOnError();
   }, [errors]);
 
   return {

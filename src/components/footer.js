@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { GiCandyCanes } from "react-icons/gi"
 
 import "./footer.scss"
 
@@ -11,6 +12,7 @@ const Footer = ({ siteTitle }) => (
       {` `}
       <a href="https://www.gatsbyjs.org">Gatsby</a>
     </div>
+    <GiCandyCanes />
     <Link to="/" >{siteTitle}</Link>
   </footer>
 )

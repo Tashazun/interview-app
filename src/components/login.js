@@ -1,5 +1,7 @@
 import React from "react"
 import { navigate } from "gatsby";
+import { MdError } from "react-icons/md";
+
 import useForm from "./useForm";
 import validate from './validation';
 
@@ -23,10 +25,18 @@ const Form = () => {
           name="username"
           onChange={handleChange}
           value={values.username || ""}
-          required
+          aria-describedby="error__1"
+          aria-required="true"
         />
         {errors.username && (
-          <p className="login__error-message">{errors.username}</p>
+          <span
+            id="error__1"
+            className="login__error-message"
+            tabIndex="-1"
+          >
+            <MdError />
+            {errors.username}
+          </span>
         )}
         <label htmlFor="password" className="login__label">Password</label>
         <input
@@ -36,10 +46,18 @@ const Form = () => {
           name="password"
           onChange={handleChange}
           value={values.password || ""}
-          required
+          aria-describedby="error__2"
+          aria-required="true"
         />
         {errors.password && (
-          <p className="login__error-message">{errors.password}</p>
+          <span
+            id="error__2"
+            className="login__error-message"
+            tabIndex="-1"
+          >
+            <MdError />
+            {errors.password}
+          </span>
         )}
         <button
           className="login__button"

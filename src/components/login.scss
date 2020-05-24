@@ -16,17 +16,28 @@
   &__password {
     border-radius: 5px;
     margin: .5em;
+    height: 2em;
+    width: 80%;
   }
 
 
   &__button {
     margin: 1.5em .5em;
-    border: 5px solid #FF667A;
+    border: 5px solid #FCC8CF;
     border-radius: 25px;
     width: 10em;
     height: 3em;
     background: transparent;
-    color: #FF667A;
+    color: #FCC8CF;
     font-size: 1em
+  }
+
+  &__error-message {
+    color: red;
+    margin: 0 .5em .5em .5em;
+
+    svg {
+      margin-right: .5em;
+    }
   }
 }
