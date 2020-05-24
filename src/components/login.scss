@@ -15,7 +15,7 @@
   }
   
   &__input {
-    border: 2px solid #FCD8C8;
+    border: 2px solid #FCC8CF;
     border-radius: 10px;
     margin: .5em;
     padding: .5em;
@@ -24,14 +24,14 @@
     transition: all 0.3s ease;
     &:focus {
       outline: none;
-      background: #FCD8C8;
+      background: #FCC8CF;
       transform: scale(1.1);
     }
     @include desktop {
       width: 50%;
     }
     &--invalid {
-      border: 2px solid #FF5252;
+      border: 2px solid #ff3e3e;
     }
   }
 
@@ -56,11 +56,16 @@
   }
 
   &__error-message {
-    color: #FF5252;
+    display: flex;
+    color: #FFF;
+    font-size: 1.2em;
     margin: 0 .5em .5em .5em;
-
+    &:focus {
+      outline: 2px solid #FCD8C8;
+    }
     svg {
       margin-right: .5em;
+      fill: #ff3e3e
     }
   }
 }
