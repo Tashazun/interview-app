@@ -10,7 +10,7 @@ const Footer = ({ siteTitle }) => (
     <div className="footer__disclaimer">
     © {new Date().getFullYear()}, Built with
       {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
+      <a href="https://www.gatsbyjs.org" aria-label="External page for more Gatsby.js info">Gatsby</a>
     </div>
     <div className="footer__links">
       <GiCandyCanes className="footer__logo" aria-hidden="true"/>
