@@ -1,3 +1,5 @@
+@import "../styles/style";
+
 .forgotten-page {
   position: relative;
   display: flex;
@@ -7,20 +9,51 @@
   background: #280047;
   min-height: 50%;
   padding: .5em;
-  margin: .5em;
+  margin: 0 .5em;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.50);
 
   &__title {
     color: #FFF;
     font-family: Arial, Helvetica, sans-serif;
+    margin: .2em;
+    font-size: 1.5em;
   }
 
   &__greeting {
     color: #FFF;
     font-family:'Courier New', Courier, monospace;
+    margin: .4em;
+  }
+
+  &__radio-group {
+    color: #FFF;
+  }
+
+  &__input {
+    margin: .5em;
+    &:focus {
+      outline: 2px solid #FCD8C8;
+    }
+  }
+
+  &__gif-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      margin: .5em;
+    }
+  }
+  
+
+  &__container {
+    text-align: center;
+    margin-bottom: .2em;
   }
 
   &__credentials {
+    text-align: center;
     color: #FFF;
     font-family: Arial, Helvetica, sans-serif;
   }

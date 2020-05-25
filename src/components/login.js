@@ -16,7 +16,11 @@ const Form = () => {
   }
  
   return (
-      <form className="login" onSubmit={handleSubmit}>
+      <form
+        role="form"
+        className="login"
+        onSubmit={handleSubmit}
+      >
         <label htmlFor="username" className="login__label">Username</label>
         <input
           id="username"
