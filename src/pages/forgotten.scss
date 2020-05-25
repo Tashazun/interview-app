@@ -1,0 +1,37 @@
+.forgotten-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #280047;
+  min-height: 50%;
+  padding: .5em;
+  margin: .5em;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.50);
+
+  &__title {
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  &__greeting {
+    color: #FFF;
+    font-family:'Courier New', Courier, monospace;
+  }
+
+  &__credentials {
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  a {
+    color: #FFF;
+    font-family:'Courier New', Courier, monospace;
+    padding: .2em;
+    margin: .2em;
+    &:focus {
+      outline: 2px solid #FCD8C8;
+    }
+  }
+}

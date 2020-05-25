@@ -20,9 +20,13 @@
   }
 
   &__logo {
-    height: 3em;
-    width: 3em;
+    height: 2em;
+    width: 2em;
     align-self: center;
+    @include tablet {
+      height: 3em;
+      width: 3em;
+    }
   }
 
   a {

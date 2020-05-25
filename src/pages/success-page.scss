@@ -1,0 +1,74 @@
+.success-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #280047;
+  min-height: 50%;
+  padding: .5em;
+  margin: .5em;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.50);
+
+  &__animation {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -20px;
+    background: white;
+    border-radius: 50%;
+    animation: reveal .5s ease-in;
+    height: 5em;
+    width: 5em;
+  }
+
+  &__icon {
+    height: 3em;
+    width: 3em;
+    color: #3a0c4d;
+    animation: grow 1s ease-in;
+  }
+
+  &__title {
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  &__greeting {
+    color: #FFF;
+    font-family:'Courier New', Courier, monospace;
+  }
+
+  a {
+    color: #FFF;
+    font-family:'Courier New', Courier, monospace;
+    padding: .2em;
+    margin: .2em;
+    &:focus {
+      outline: 2px solid #FCD8C8;
+    }
+  }
+}
+
+@keyframes reveal {
+  from {
+    width: 0;
+    height: 0;
+  }
+
+  to {
+    width: 5em;
+    height: 5em;
+  }
+}
+
+@keyframes grow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100;
+  }
+}

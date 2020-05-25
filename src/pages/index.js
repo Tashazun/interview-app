@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Login from "../components/login"
@@ -12,7 +13,7 @@ const IndexPage = () => (
     <section className="form">
       <h1 className="form__heading">Log Into Your Account</h1>
       <Login />
-      <p className="form__forgotten-password">Forgot Password?</p>
+      <Link to="/forgotten" >Forgot Password/Username?</Link>
     </section>
   </Layout>
 )

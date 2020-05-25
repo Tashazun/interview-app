@@ -4,7 +4,7 @@
   height: 100vh;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 5% 80% 15%;
+  grid-template-rows: 5% 75% 20%;
   background: linear-gradient(315deg, rgba(40,0,71,1) 26%, rgba(255,146,146,1) 100%);
   @include tablet {
     grid-template-columns: 1fr 2fr 1fr;

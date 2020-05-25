@@ -12,7 +12,7 @@ const Form = () => {
 
   function login() {
     console.log('No errors, submit callback called!');
-    navigate("/page-2");
+    navigate("/success-page");
   }
  
   return (
