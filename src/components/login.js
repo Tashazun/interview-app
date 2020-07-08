@@ -1,19 +1,14 @@
 import React from "react"
-import { navigate } from "gatsby";
 import { MdError } from "react-icons/md";
 
 import useForm from "./useForm";
-import validate from './validation';
+
 
 import "./login.scss";
 
+// Login form as stateful functional component
 const Form = () => {
-  const { values, errors, handleChange, handleSubmit } = useForm(login, validate);
-
-  function login() {
-    console.log('No errors, submit callback called!');
-    navigate("/success-page");
-  }
+  const { values, errors, handleChange, handleSubmit } = useForm();
  
   return (
       <form
@@ -28,6 +23,7 @@ const Form = () => {
           type="text"
           name="username"
           onChange={handleChange}
+          // value takes username input or if none exist set the default to empty string. Prevents uncontrolled to controlled
           value={values.username || ""}
           aria-describedby={`${errors.username ? "error__1" : ""}`}
           aria-required="true"
