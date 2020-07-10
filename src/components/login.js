@@ -17,6 +17,16 @@ const Form = () => {
         onSubmit={handleSubmit}
       >
         <label htmlFor="username" className="login__label">Username</label>
+        {errors.username && (
+          <span
+            id="error__1"
+            className="login__error-message"
+            tabIndex="-1"
+          >
+            <MdError aria-hidden="true"/>
+            {errors.username}
+          </span>
+        )}
         <input
           id="username"
           className={`login__input ${errors.username && 'login__input--invalid'}`}
@@ -28,27 +38,8 @@ const Form = () => {
           aria-describedby={`${errors.username ? "error__1" : ""}`}
           aria-required="true"
         />
-        {errors.username && (
-          <span
-            id="error__1"
-            className="login__error-message"
-            tabIndex="-1"
-          >
-            <MdError aria-hidden="true"/>
-            {errors.username}
-          </span>
-        )}
+
         <label htmlFor="password" className="login__label">Password</label>
-        <input
-          id="password"
-          className={`login__input ${errors.password && 'login__input--invalid'}`}
-          type="password"
-          name="password"
-          onChange={handleChange}
-          value={values.password || ""}
-          aria-describedby={`${errors.password ? "error__2" : ""}`}
-          aria-required="true"
-        />
         {errors.password && (
           <span
             id="error__2"
@@ -59,6 +50,17 @@ const Form = () => {
             {errors.password}
           </span>
         )}
+        <input
+          id="password"
+          className={`login__input ${errors.password && 'login__input--invalid'}`}
+          type="password"
+          name="password"
+          onChange={handleChange}
+          value={values.password || ""}
+          aria-describedby={`${errors.password ? "error__2" : ""}`}
+          aria-required="true"
+        />
+
         <button
           className="login__button"
           type="submit"
