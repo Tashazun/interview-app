@@ -7,7 +7,7 @@ import useForm from "./useForm";
 import "./login.scss";
 
 // Login form as stateful functional component
-const Form = () => {
+const Login = () => {
   const { values, errors, handleChange, handleSubmit } = useForm();
  
   return (
@@ -70,4 +70,4 @@ const Form = () => {
   )
 }
 
-export default Form
+export default Login
